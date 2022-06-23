@@ -1,7 +1,7 @@
 const countryСardMarkup = ({ flags, name, capital, population, languages }) => {
   return `
     <div class="country-info__wrapper">
-      <img class="country-info__flags" src="${flags.svg}" alt="${name.official}" width="50" />
+      <img class="country-info__flags" src="${flags.svg}" alt="${name.official}" width="60" height="40" />
       <h2 class="country-info__name">${name.official}</h2>
     </div>
     <p><b>Capital:  </b>${capital}</p>

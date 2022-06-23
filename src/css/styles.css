@@ -30,6 +30,7 @@ ul {
 
 .country-info__wrapper {
   display: flex;
+  align-items: center;
   font-size: 28px;
 }
 .country-info__flags {
