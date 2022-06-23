@@ -11,7 +11,6 @@ const countryListRef = document.querySelector(".country-list");
 const countryInfoRef = document.querySelector(".country-info");
 
 
-
 fetchCountriesInputRef.addEventListener("input", debounce(onInputCountry, DEBOUNCE_DELAY));
 
 function cleanMarkup(ref) {
