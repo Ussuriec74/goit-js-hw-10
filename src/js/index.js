@@ -18,7 +18,7 @@ function cleanMarkup(ref) {
 };
 
 function onInputCountry() {
-  const countryName = fetchCountriesInputRef.value;
+  const countryName = fetchCountriesInputRef.value.trim();
   if (countryName === "") {
     cleanMarkup(countryListRef);
     cleanMarkup(countryInfoRef);
@@ -28,6 +28,8 @@ function onInputCountry() {
   fetchCountries(countryName).then((countries) => {
     if (countries.length > 10) {
       Notiflix.Notify.info("Too many matches found. Please enter a more specific name.");
+      cleanMarkup(countryListRef);
+      cleanMarkup(countryInfoRef);
       return
     } else if (countries.length === 1) {
       cleanMarkup(countryListRef);
